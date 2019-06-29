@@ -18,7 +18,7 @@
       <v-list>
         <v-list-tile>
           <v-list-tile-title class="title">
-            Application
+            Hamburger Menu
           </v-list-tile-title>
         </v-list-tile>
       </v-list>
@@ -26,11 +26,11 @@
 
     <v-divider></v-divider>
 
-    <v-list dense class="pt-0">
-      <v-list-tile v-for="item in items" :key="item.title">
-        <v-list-tile-action>
+    <v-list two-line class="pt-0">
+      <v-list-tile v-for="item in items" :key="item.title" exact="item.link" router :to="item.link">
+        <v-list-tile>
           <v-icon>{{ item.icon }}</v-icon>
-        </v-list-tile-action>
+        </v-list-tile>
 
         <v-list-tile-content>
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
@@ -48,11 +48,18 @@ export default {
       drawerVis: false,
       items: [{
           title: 'Home',
-          icon: 'dashboard'
+          icon: 'home',
+          link: 'home'
+        },
+        {
+          title: 'Directions',
+          icon: 'directions',
+          link: 'directions'
         },
         {
           title: 'About',
-          icon: 'question_answer'
+          icon: 'question_answer',
+          link: 'about'
         }
       ],
       right: null
