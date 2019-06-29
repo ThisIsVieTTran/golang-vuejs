@@ -7,9 +7,9 @@
     <v-toolbar-title>SomeApp</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat>Descriptive</v-btn>
-      <v-btn flat>Predictive</v-btn>
-      <v-btn flat>Prescriptive</v-btn>
+      <v-btn flat>Buy Now</v-btn>
+      <v-btn flat>Sell Here</v-btn>
+      <v-btn flat>Who We Are</v-btn>
     </v-toolbar-items>
   </v-toolbar>
 
@@ -55,6 +55,11 @@ export default {
           title: 'Directions',
           icon: 'directions',
           link: 'directions'
+        },
+        {
+          title: 'Dashboard',
+          icon: 'dashboard',
+          link: 'dashboard'
         },
         {
           title: 'About',
